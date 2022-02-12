@@ -9,7 +9,7 @@ set "YES=y"
 set "COMMIT_MESSAGE="
 set "CONTINUE="
 set /p COMMIT_MESSAGE="Please enter commit message: "
-set /p CONTINUE="Your message is: %COMMIT_MESSAGE%. Do you want to continue [y/n]?"
+set /p CONTINUE="Your message is: %COMMIT_MESSAGE%. Do you want to  [y/n]?"
 if /i %CONTINUE% == %YES% (call :pushToGit "%COMMIT_MESSAGE%") else (goto loop)
 goto endLoop
 
