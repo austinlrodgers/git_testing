@@ -19,8 +19,7 @@ call git add .
 pause
 call git commit -m "%~1"
 call git push origin main
-pause
-if %errorlevel%==0 (echo "Changes Successfully Committed") else (echo "Error: %errorlevel%)
+echo "Changes Successfully Committed"
 goto endLoop
 
 :end
