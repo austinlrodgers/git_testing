@@ -7,15 +7,13 @@ set "COMMIT_MESSAGE="
 set "CONTINUE="
 set /p COMMIT_MESSAGE="Please enter commit message: "
 set /p CONTINUE="Your message is: %COMMIT_MESSAGE%. Do you want to continue [y/n]?"
-if /i %CONTINUE% == %YES% call :pushToGit %COMMIT_MESSAGE%
 if /i NOT %CONTINUE% == %YES% goto loop
-echo broken
-pause
+call :pushToGit %COMMIT_MESSAGE%
 EXIT /B 1
 	
 :pushToGit
-@echo on
 echo Entry being committed with message: "%~1"
+cd "C:\Projects\Blue\Ghostdraft"
 call git add .
 call git commit -m "%~1"
 EXIT /B 0
