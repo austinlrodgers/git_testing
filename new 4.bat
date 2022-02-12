@@ -18,7 +18,6 @@ echo Entry being committed with message: "%~1"
 call git add .
 call git commit -m "%~1"
 call git push origin main
-goto endLoop
 
 :end
 echo "Changes Successfully Committed"
