@@ -17,9 +17,9 @@ goto endLoop
 echo Entry being committed with message: %~1
 call git add .
 pause
-call git commit -m "'%~1'"
-pause
+call git commit -m "%~1"
 call git push origin main
+pause
 if %errorlevel%==0 (echo "Changes Successfully Committed") else (echo "Error: %errorlevel%)
 goto endLoop
 
