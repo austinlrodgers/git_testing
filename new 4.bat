@@ -2,6 +2,7 @@
 call git diff --exit-code --quiet
 if %errorlevel%==0 (echo "You have no current changes";) else (goto loop)
 goto end
+EXIT /B 0
 
 :loop
 set "YES=y"
@@ -21,3 +22,4 @@ goto end
 :end
 echo "Changes Successfully Committed"
 pause
+EXIT /B 0
