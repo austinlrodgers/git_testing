@@ -2,7 +2,7 @@
 call git diff --exit-code --quiet
 echo %errorlevel%
 pause
-if (%errorlevel%==0) (echo "You have no current changes";) else (goto loop)
+if %errorlevel%==0 (echo "You have no current changes";) else (goto loop)
 goto end
 
 :loop
