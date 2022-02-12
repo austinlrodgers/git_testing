@@ -13,7 +13,8 @@ EXIT /B 1
 	
 :pushToGit
 echo Entry being committed with message: "%~1"
-cd "C:\Projects\Blue\Ghostdraft"
 call git add .
 call git commit -m "%~1"
+call git push -u origin main
 EXIT /B 0
+	
