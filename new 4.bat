@@ -18,9 +18,10 @@ echo Entry being committed with message: "%~1"
 call git add .
 call git commit -m "%~1"
 call git push origin main
+if %errorlevel%==0 (echo "Changes Successfully Committed") else (EXIT /B 1)
+
 goto endLoop
 
 :end
-echo "Changes Successfully Committed"
 pause
 EXIT /B 0
