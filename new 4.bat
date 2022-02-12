@@ -3,7 +3,6 @@ call git diff --exit-code --quiet
 echo %errorlevel%
 pause
 if (%errorlevel%==0) (echo "You have no current changes";) else (goto loop)
-pause
 goto end
 
 :loop
@@ -21,6 +20,7 @@ echo Entry being committed with message: "%~1"
 call git add .
 call git commit -m "%~1"
 call git push origin main
+pause
 EXIT /B 0
 
 :end
