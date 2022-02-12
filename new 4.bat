@@ -21,4 +21,3 @@ goto end
 :end
 echo "Changes Successfully Committed"
 pause
-EXIT /B 0
