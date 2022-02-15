@@ -15,6 +15,7 @@ goto endLoop
 
 :pushToGit
 echo Entry being committed with message: %~1
+cd "E:\Batch Files\"
 call git add .
 call git commit -m "%~1"
 call git push origin main
