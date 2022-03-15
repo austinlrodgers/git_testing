@@ -1,4 +1,4 @@
-@echo on
+@echo off
 
 cd /D "C:\Users\wipeo\AppData\Local\Microsoft\Teams"
 start Update.exe --processStart "Teams.exe" --process-start-args "--profile=AAD"
