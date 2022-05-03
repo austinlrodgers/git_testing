@@ -15,9 +15,7 @@ goto endLoop
 
 :pushToGit
 echo Entry being committed with message: %~1
-call git add .
-call git commit -m "%~1"
-call git push
+call git commit -am "%~1" && git push
 echo "Changes Successfully Committed"
 goto endLoop
 
